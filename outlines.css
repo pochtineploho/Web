@@ -27,6 +27,25 @@ header {
     background-color: #ccc;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
 .categories {
     display: flex;
     gap: 10px;
