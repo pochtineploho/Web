@@ -53,7 +53,7 @@ nav ul li a {
 
 .search-link {
     margin-left: auto;
-    margin-right: 20px; /* Отодвигаем поиск влево */
+    margin-right: 20px;
 }
 
 .account-nav {
@@ -89,11 +89,11 @@ main {
 }
 
 .products {
-    width: 70%; /* Основной контент (товары) слева */
+    width: 70%;
 }
 
 .sidebar {
-    width: 30%; /* Боковая панель справа */
+    width: 30%;
     padding: 20px;
     box-sizing: border-box;
 }
