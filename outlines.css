@@ -89,13 +89,7 @@ main {
 }
 
 .products {
-    width: 70%;
-}
-
-.sidebar {
-    width: 30%;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 .product-grid {
