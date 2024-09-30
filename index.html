@@ -12,17 +12,19 @@
 <header>
     <div class="header-nav">
         <div class="categories">
-            <a href="#">Женское</a>
-            <a href="#">Мужское</a>
-            <a href="#" class="search-link">Поиск</a>
+            <button class="gender-btn active" id="female-btn">Женское</button>
+            <button class="gender-btn" id="male-btn">Мужское</button>
+            <a href="#" class="search-link"><img src="icons/search.png" alt="Поиск" class="icon-search"></a>
         </div>
 
-        <h1>POCHTINEPLOHO</h1>
+        <a href="index.html" class="logo">
+            <img src="icons/POCHTINEPLOHO.png" alt="POCHTINEPLOHO Логотип">
+        </a>
 
         <div class="account-nav">
-            <a href="#">Аккаунт</a>
-            <a href="#">Избранное</a>
-            <a href="#">Корзина</a>
+            <a href="#"><img src="icons/account.png" alt="Аккаунт" class="icon"></a>
+            <a href="#"><img src="icons/favorites.png" alt="Избранное" class="icon"></a>
+            <a href="#"><img src="icons/cart.png" alt="Корзина" class="icon"></a>
         </div>
     </div>
     <nav>
@@ -40,118 +42,16 @@
 
 <main>
     <section class="products">
-        <div class="product-grid">
-            <div class="product-card">
-                <pre>
-_______________
-|===============|
-|     /```\     |
-|    /    /\    |
-'--._\   | /_.--'
-`\__\/`
-                </pre>
-                <h3>Cavin Klen</h3>
-                <p>Нижнее бельё</p>
-                <p>7000 р.</p>
-            </div>
-
-            <div class="product-card">
-                <pre>
-/| |\
-( \./ )
-\ : /
-) : (
-/  :  \
-|__:__|
-                </pre>
-                <h3>Gussi</h3>
-                <p>Платье</p>
-                <p>170000 р.</p>
-            </div>
-            <div class="product-card">
-                <pre>
-___ ___
-/| |/|\| |\
-/_| ´ |.` |_\
-|   |.  |
-|   |.  |
-|___|.__|
-                </pre>
-                <h3>Arm'ane</h3>
-                <p>Рубашка</p>
-                <p>18700 р.</p>
-            </div>
-            <div class="product-card">
-                <pre>
-.~~~~`\~~\
-;       ~~ \
-|           ;
-,--------,______|---.
-/          \-----`    \
-`.__________`-_______-'
-                </pre>
-                <h3>Kakraz</h3>
-                <p>Шляпа</p>
-                <p>2000 р.</p>
-            </div>
-            <div class="product-card">
-                <pre>
-,==c==.
-|_/|\_|
-| ´|` |
-|  |  |
-|  |  |
-|__|__|
-                </pre>
-                <h3>Rita</h3>
-                <p>Штаны</p>
-                <p>120308 р.</p>
-            </div>
-            <div class="product-card">
-                <pre>
-/   \
-(_\./_)
-
-=-.-=
-\   /
-\_/
-                </pre>
-                <h3>Longimisimi</h3>
-                <p>Бикини</p>
-                <p>16000 р.</p>
-            </div>
-            <div class="product-card">
-                <pre>
-===E===
-/_] | [_\
-|         |
-|    |    |
-|____|____|
-|____!____|
-                </pre>
-                <h3>Maven</h3>
-                <p>Шорты</p>
-                <p>3500 р.</p>
-            </div>
-            <div class="product-card">
-                <pre>
-_   _
-/)`:'(\
-//| : |\\
-|-'-|
-| | |
-|_|_|
-                </pre>
-                <h3>Sleepunder</h3>
-                <p>Пижама</p>
-                <p>6000 р.</p>
-            </div>
+        <div class="product-grid" id="product-grid">
+            <script src="scripts/products.js"></script>
         </div>
     </section>
 </main>
 
+<script src="scripts/gender-button.js"></script>
+</body>
 <footer>
     <p>© 2024 POCHTINEPLOHO. Все права защищены.</p>
 </footer>
-</body>
+
 </html>
