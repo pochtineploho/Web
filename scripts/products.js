@@ -7,28 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "7000 р.",
             image: "images/products/negr.jpg"
         },
-        {
-            name: "Томми",
-            description: "Негр",
-            price: "7000 р.",
-            image: "images/products/negr.jpg"
-        },
-        {
-            name: "Майкл",
-            description: "Негр",
-            price: "7000 р.",
-            image: "images/products/negr.jpg"
-        },        {
-            name: "Карл",
-            description: "Негр",
-            price: "7000 р.",
-            image: "images/products/negr.jpg"
-        },        {
-            name: "Убвемубвем О Сас",
-            description: "Негр",
-            price: "7000 р.",
-            image: "images/products/negr.jpg"
-        }
+
     ];
 
     const productGrid = document.getElementById('product-grid');
@@ -38,15 +17,22 @@ document.addEventListener('DOMContentLoaded', function() {
         card.classList.add('product-card');
 
         card.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <p>${product.price}</p>
+        <div class="card-icons">
+            <button class="favorite-btn">
+                <img src="icons/favorites.png" alt="Избранное">
+            </button>
+            <button class="cart-btn">
+                <img src="icons/cart.png" alt="Добавить в корзину">
+            </button>
+        </div>
+        <img src="${product.image}" alt="${product.name}">
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+        <p>${product.price}</p>
         `;
         return card;
     }
 
-    // Генерация карточек для каждого товара
     products.forEach(product => {
         const productCard = createProductCard(product);
         productGrid.appendChild(productCard);
