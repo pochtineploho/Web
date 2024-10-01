@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         card.innerHTML = `
         <div class="card-icons">
-            <button class="favorite-btn">
-                <img src="icons/favorites.png" alt="Избранное">
+            <button class="like-btn">
+                <img src="icons/favorites.png" alt="Избранное" class="like-icon">
             </button>
             <button class="cart-btn">
                 <img src="icons/cart.png" alt="Добавить в корзину">

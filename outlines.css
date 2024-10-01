@@ -30,6 +30,7 @@ header {
     padding: 10px;
     background-color: #ccc;
     position: relative;
+    border-radius: 5px;
 }
 
 /* -- Logo Styles -- */
@@ -165,6 +166,7 @@ nav a {
 
 nav a:hover {
     background-color: #ddd;
+    transform: scale(1.05);
 }
 
 /* === Main styles === */
@@ -226,7 +228,7 @@ main {
     z-index: 5;
 }
 
-.favorite-btn, .cart-btn {
+.like-btn, .cart-btn {
     background-color:  transparent;
     border: none;
     cursor: pointer;
@@ -234,13 +236,13 @@ main {
     transition: transform 0.3s ease;
 }
 
-.favorite-btn img, .cart-btn img {
+.like-btn img, .cart-btn img {
     border-radius: 0;
     width: 24px;
     height: 24px;
 }
 
-.favorite-btn:hover img, .cart-btn:hover img {
+.like-btn:hover img, .cart-btn:hover img {
     transform: scale(1.2);
 }
 
@@ -259,12 +261,10 @@ main {
     color: #555;
 }
 
-
 /* === Footer Styles === */
 
 footer {
     margin-top: auto;
-    padding: 20px;
     background-color: #f0f0f0;
     text-align: center;
     width: 100%;
