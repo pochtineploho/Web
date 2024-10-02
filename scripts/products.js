@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Билли",
             description: "Негр",
             price: "7000 р.",
-            image: "images/products/negr.jpg"
+            image: "images/products/beer.jpg"
         },
 
     ];
