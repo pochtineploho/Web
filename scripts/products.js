@@ -7,6 +7,72 @@ document.addEventListener('DOMContentLoaded', function() {
             price: "7000 р.",
             image: "images/products/beer.jpg"
         },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
+        {
+            name: "Пивозавр",
+            description: "Футболка",
+            price: "7000 р.",
+            image: "images/products/beer.jpg"
+        },
 
     ];
 
