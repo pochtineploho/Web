@@ -16,7 +16,6 @@ body {
 }
 
 /* === Header Styles === */
-
 header {
     width: 100%;
     padding: 10px;
@@ -57,7 +56,7 @@ header {
     display: block;
 }
 
-.categories, .account-nav {
+.header-nav-left, .header-nav-right {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -67,9 +66,6 @@ header {
     vertical-align: middle;
     height: 30px;
 }
-
-
-/* -- Gender button Styles --*/
 
 .gender-btn {
     display: flex;
@@ -85,6 +81,7 @@ header {
     margin: 0 5px;
     height: 40px;
 }
+
 
 .gender-btn.active {
     background-color: #333;
@@ -110,20 +107,27 @@ header {
     margin-left: 20px;
 }
 
-.account-nav img.icon {
+.header-nav-right img.icon {
     width: 30px;
     height: auto;
     margin: 0 10px;
     transition: transform 0.3s ease;
 }
 
-.account-nav img.icon:hover {
+.header-nav-right img.icon:hover {
     transform: scale(1.1);
 }
 
 /* === Navigation Styles === */
+.header-categories {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
 
-nav ul {
+.header-categories ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -131,30 +135,20 @@ nav ul {
     gap: 10px;
 }
 
-nav ul li {
+.header-categories ul li {
     display: inline;
 }
 
-nav ul li a {
+.header-categories ul li a {
     text-decoration: none;
     padding: 10px;
     background-color: #ccc;
     border-radius: 5px;
 }
 
-.categories {
-    display: flex;
-    gap: 10px;
-}
-
 .search-link {
     margin-left: auto;
     margin-right: 20px;
-}
-
-.account-nav {
-    display: flex;
-    gap: 10px;
 }
 
 nav {
@@ -322,4 +316,40 @@ footer {
     background-color: #f0f0f0;
     text-align: center;
     width: 100%;
+}
+
+.ad-banner {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 850px) {
+    .ad-banner {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .gender-btn{
+        padding: 5px 5px;
+        display: flex;
+    }
+}
+
+@media (max-width: 400px) {
+    .gender-btn{
+        display: none;
+    }
+    .icon-search {
+        margin-left: 0;
+    }
+    .header-nav-right {
+        margin: 0;
+    }
 }
