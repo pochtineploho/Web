@@ -275,7 +275,7 @@ main {
     width: 90%;
     margin: 0 auto;
     position: absolute;
-    top: 20px;
+    top: 17px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5
@@ -283,6 +283,8 @@ main {
 
 .like-btn, .cart-btn {
     background-color: transparent;
+    height: 40px;
+    width: auto;
     border: none;
     cursor: pointer;
     padding: 5px;
