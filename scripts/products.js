@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Массив с данными о товарах
     const products = [
         {
-            name: "Билли",
-            description: "Негр",
+            name: "Пивозавр",
+            description: "Футболка",
             price: "7000 р.",
             image: "images/products/beer.jpg"
         },
@@ -19,16 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
         card.innerHTML = `
         <div class="card-icons">
             <button class="like-btn">
-                <img src="icons/favorites.png" alt="Избранное" class="like-icon">
+                <img src="icons/favorites2.png" alt="Избранное" class="like-icon">
             </button>
             <button class="cart-btn">
-                <img src="icons/cart.png" alt="Добавить в корзину">
+                <img src="icons/cart2.png" alt="Добавить в корзину">
             </button>
         </div>
         <img src="${product.image}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        <p>${product.description}</p>
-        <p>${product.price}</p>
+        
+         <div class="product-footer">
+            <div class="product-info">
+                <h3>${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+            </div>
+            <p class="product-price">${product.price}</p>
+        </div>
+    </div>
         `;
         return card;
     }

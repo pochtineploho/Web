@@ -9,7 +9,8 @@ body {
     flex-direction: column;
     margin: 0;
     min-height: 100vh;
-    font-family: 'Arial', sans-serif; /* Семейство шрифтов */
+
+    font-family: 'Arial', sans-serif;
     color: #000;
     background-color: #f9f9f9;
 }
@@ -23,7 +24,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .header-nav {
@@ -35,20 +35,25 @@ header {
     background-color: #ccc;
     position: relative;
     border-radius: 5px;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
 /* -- Logo Styles -- */
 .logo {
-    display: block;
+    display: flex;
     margin: 0 auto;
     position: absolute;
     left: 50%;
+    justify-content: center;
     transform: translateX(-50%);
+    max-width: 300px;
+    width: 20vw;
 }
 
 .logo img {
     height: 50px;
-    width: auto;
+    width: 100%;
     display: block;
 }
 
@@ -99,7 +104,6 @@ header {
 }
 
 /* --- Account and Icon Styles --- */
-
 .icon-search {
     width: 30px;
     height: auto;
@@ -204,9 +208,11 @@ main {
     text-align: center;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
 
 }
 
@@ -215,16 +221,58 @@ main {
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
-   /* margin-bottom: 15px; */
+    margin-bottom: 10px;
     transition: transform 0.3s ease;
     z-index: 1;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.product-info {
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+    margin-left: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.product-card .product-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+    white-space: nowrap;
 }
 
 /* === Icon Buttons === */
 .card-icons {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     position: absolute;
     top: 20px;
@@ -234,7 +282,7 @@ main {
 }
 
 .like-btn, .cart-btn {
-    background-color:  transparent;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 5px;
@@ -267,7 +315,6 @@ main {
 }
 
 /* === Footer Styles === */
-
 footer {
     margin-top: auto;
     background-color: #f0f0f0;

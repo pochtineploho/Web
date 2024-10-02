@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 favoriteIcon.src = 'icons/liked.png';
                 favoriteIcon.alt = 'Убрать из избранного';
             } else {
-                favoriteIcon.src = 'icons/favorites.png';
+                favoriteIcon.src = 'icons/favorites2.png';
                 favoriteIcon.alt = 'Добавить в избранное';
             }
         });
