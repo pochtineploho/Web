@@ -84,6 +84,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
         card.innerHTML = `
         <a href="product-page.html" class="product-link">
+        <img src="${product.image}" alt="${product.name}">
+        <div class="product-footer">
+            <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
+            </div>
+            <p class="product-price">${product.price}</p>
+        </div>
+    </a>
         <div class="card-icons">
             <button class="like-btn">
                 <img src="icons/favorites2.png" alt="Избранное" class="like-icon">
@@ -92,17 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img src="icons/cart2.png" alt="Добавить в корзину">
             </button>
         </div>
-        <img src="${product.image}" alt="${product.name}">
-        
-         <div class="product-footer">
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <p class="product-description">${product.description}</p>
-            </div>
-            <p class="product-price">${product.price}</p>
-        </div>
-    </div>
-    </a>
         `;
         return card;
     }
