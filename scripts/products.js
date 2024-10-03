@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         card.classList.add('product-card');
 
         card.innerHTML = `
+        <a href="product-page.html" class="product-link">
         <div class="card-icons">
             <button class="like-btn">
                 <img src="icons/favorites2.png" alt="Избранное" class="like-icon">
@@ -101,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p class="product-price">${product.price}</p>
         </div>
     </div>
+    </a>
         `;
         return card;
     }
