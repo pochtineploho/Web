@@ -341,19 +341,21 @@ footer {
         display: none;
     }
 
-    .gender-btn{
+    .gender-btn {
         padding: 5px 5px;
         display: flex;
     }
 }
 
 @media (max-width: 400px) {
-    .gender-btn{
+    .gender-btn {
         display: none;
     }
+
     .icon-search {
         margin-left: 0;
     }
+
     .header-nav-right {
         margin: 0;
     }
@@ -448,4 +450,20 @@ footer {
     align-items: center;
     gap: 5px;
     font-weight: normal;
+}
+
+#reset-filters-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+#reset-filters-btn:hover {
+    background-color: #555;
 }

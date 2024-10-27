@@ -59,7 +59,6 @@ function createProductCard(product) {
     return card;
 }
 
-// Функция отображения товаров
 function displayProducts(filteredProducts) {
     const productGrid = document.getElementById('product-grid');
     productGrid.innerHTML = '';
@@ -68,47 +67,51 @@ function displayProducts(filteredProducts) {
     });
 }
 
-// Фильтрация по полу и категориям
-function filterProductsByCategory(selectedCategories) {
+// Обновленная функция фильтрации
+function filterProducts() {
+    const searchValue = document.getElementById('search-bar').value.toLowerCase().trim();
+    const selectedCategories = Array.from(document.querySelectorAll('.category-filters input[type="checkbox"]:checked'))
+        .map(checkbox => checkbox.value);
+
     const filteredProducts = products.filter(product => {
         const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
         const matchesGender = product.gender === currentGender;
-        return matchesCategory && matchesGender;
+        const matchesSearch = product.name.toLowerCase().includes(searchValue) ||
+            product.category.toLowerCase().includes(searchValue);
+
+        return matchesCategory && matchesGender && matchesSearch;
     });
+
     displayProducts(filteredProducts);
 }
 
-// Обработчики для фильтров категорий
 const categoryFilters = document.querySelectorAll('.category-filters input[type="checkbox"]');
 categoryFilters.forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-        const selectedCategories = Array.from(categoryFilters)
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.value);
-
-        filterProductsByCategory(selectedCategories);
-    });
+    checkbox.addEventListener('change', filterProducts);
 });
 
 document.getElementById('reset-filters-btn').addEventListener('click', function() {
     categoryFilters.forEach(cb => cb.checked = false);
-    filterProductsByCategory([]);
+    document.getElementById('search-bar').value = '';
+    filterProducts();
 });
 
 document.getElementById('female-btn').addEventListener('click', function() {
     document.getElementById('female-btn').classList.add('active');
     document.getElementById('male-btn').classList.remove('active');
     currentGender = 'female';
-    filterProductsByCategory([]);
+    filterProducts();
 });
 
 document.getElementById('male-btn').addEventListener('click', function() {
     document.getElementById('male-btn').classList.add('active');
     document.getElementById('female-btn').classList.remove('active');
     currentGender = 'male';
-    filterProductsByCategory([]);
+    filterProducts();
 });
 
+document.getElementById('search-bar').addEventListener('input', filterProducts);
+
 document.addEventListener('DOMContentLoaded', function() {
-    filterProductsByCategory([]);
+    filterProducts();
 });

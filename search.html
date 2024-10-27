@@ -7,7 +7,10 @@
     <meta name="description" content="Поиск по товарам в POCHTINEPOLOHO">
     <link rel="stylesheet" href="outlines.css">
     <title>Поиск - POCHTINEPOLOHO</title>
+
+    <script src="scripts/search-from-main-page.js"></script>
     <script src="scripts/products.js" defer></script>
+    <script src="scripts/like-button.js"></script>
 </head>
 
 <body>
@@ -31,16 +34,15 @@
 
 <main>
     <section class="search-section">
-        <label for="search-bar"></label><input type="text" id="search-bar" placeholder="Поиск товаров..." autocomplete="off">
+        <label for="search-bar"></label><input type="text" id="search-bar" placeholder="Поиск товаров" autocomplete="off">
         <div class="category-filters">
-            <button id="reset-filters-btn">Сбросить фильтры</button>
-            <label><input type="checkbox" value="new"> Новинки</label>
             <label><input type="checkbox" value="t-shirts"> Футболки</label>
             <label><input type="checkbox" value="hoodies"> Худи</label>
             <label><input type="checkbox" value="sweatshirts"> Свитшоты</label>
             <label><input type="checkbox" value="pants"> Штаны</label>
             <label><input type="checkbox" value="shorts"> Шорты</label>
             <label><input type="checkbox" value="accessories"> Аксессуары</label>
+            <button id="reset-filters-btn">Сбросить фильтры</button>
         </div>
     </section>
 
