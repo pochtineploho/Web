@@ -130,13 +130,14 @@ header {
 .header-categories ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 5px;
     display: flex;
     gap: 10px;
 }
 
 .header-categories ul li {
-    display: inline;
+    height: 40px;
+    display: inline-block;
 }
 
 .header-categories ul li a {
