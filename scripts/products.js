@@ -1,4 +1,3 @@
-// Универсальные товары
 const products = [
     {
         name: "Пивозавр",
@@ -24,13 +23,10 @@ const products = [
         gender: "female",
         category: "hoodies"
     }
-    // Дополнительные товары...
 ];
 
-// Переменная для отслеживания выбранного пола
 let currentGender = 'female';  // По умолчанию - женское
 
-// Функция для создания карточки товара
 function createProductCard(product) {
     const card = document.createElement('div');
     card.classList.add('product-card');
@@ -67,7 +63,6 @@ function displayProducts(filteredProducts) {
     });
 }
 
-// Обновленная функция фильтрации
 function filterProducts() {
     const searchValue = document.getElementById('search-bar').value.toLowerCase().trim();
     const selectedCategories = Array.from(document.querySelectorAll('.category-filters input[type="checkbox"]:checked'))
@@ -83,6 +78,7 @@ function filterProducts() {
     });
 
     displayProducts(filteredProducts);
+    initializeLikeButtons();
 }
 
 const categoryFilters = document.querySelectorAll('.category-filters input[type="checkbox"]');

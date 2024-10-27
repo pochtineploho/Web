@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Устанавливаем "женское" активным по умолчанию
     document.getElementById('female-btn').classList.add('active');
     filterProductsByGender('female');
 });
@@ -19,4 +18,5 @@ document.getElementById('male-btn').addEventListener('click', function () {
 function filterProductsByGender(gender) {
     const filteredProducts = products.filter(product => product.gender === gender);
     displayProducts(filteredProducts);
+    initializeLikeButtons();
 }
