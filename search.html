@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>POCHTINEPLOHO search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="POCHTINEPOLOHO, поиск, одежда, мода">
+    <meta name="description" content="Поиск по товарам в POCHTINEPOLOHO">
+    <link rel="stylesheet" href="outlines.css">
+    <title>Поиск - POCHTINEPOLOHO</title>
+    <script src="scripts/products.js" defer></script>
 </head>
+
 <body>
-    Тут будет поиск товаров по названию и категориям
+<header>
+    <div class="header-nav">
+        <div class="header-nav-left">
+            <button class="gender-btn active" id="female-btn">Женское</button>
+            <button class="gender-btn" id="male-btn">Мужское</button>
+            <script src="scripts/gender-button.js"></script>
+        </div>
+        <a href="main-page.html" class="logo">
+            <img src="icons/POCHTINEPLOHO.png" alt="POCHTINEPLOHO Логотип">
+        </a>
+        <div class="header-nav-right">
+            <a href="account.html"><img src="icons/account.png" alt="Аккаунт" class="icon"></a>
+            <a href="favorites.html"><img src="icons/favorites.png" alt="Избранное" class="icon"></a>
+            <a href="cart.html"><img src="icons/cart.png" alt="Корзина" class="icon"></a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="search-section">
+        <label for="search-bar"></label><input type="text" id="search-bar" placeholder="Поиск товаров..." autocomplete="off">
+        <div class="category-filters">
+            <button id="reset-filters-btn">Сбросить фильтры</button>
+            <label><input type="checkbox" value="new"> Новинки</label>
+            <label><input type="checkbox" value="t-shirts"> Футболки</label>
+            <label><input type="checkbox" value="hoodies"> Худи</label>
+            <label><input type="checkbox" value="sweatshirts"> Свитшоты</label>
+            <label><input type="checkbox" value="pants"> Штаны</label>
+            <label><input type="checkbox" value="shorts"> Шорты</label>
+            <label><input type="checkbox" value="accessories"> Аксессуары</label>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="product-grid" id="product-grid">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 POCHTINEPLOHO. Почти все права защищены.</p>
+    <p id="load-stats"></p>
+    <script src="scripts/load-stats.js"></script>
+</footer>
 </body>
 </html>
