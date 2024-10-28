@@ -477,3 +477,24 @@ footer {
     background-color: #ccc;
     color: #fff;
 }
+
+/* Потом удалю */
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.footer-nav li {
+    margin-right: 15px;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-nav li.active a {
+    color: red;
+    font-weight: bold;
+}
