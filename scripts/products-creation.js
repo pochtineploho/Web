@@ -1,7 +1,3 @@
-if (!localStorage.getItem("selectedGender")) {
-    localStorage.setItem("selectedGender", "female");
-}
-
 function createProductCard(product) {
     const card = document.createElement('div');
     card.classList.add('product-card');
@@ -18,7 +14,7 @@ function createProductCard(product) {
                         <h3 class="product-name">${product.name}</h3>
                         <p class="product-description product-description__common">${product.description}</p>
                     </div>
-                    <p class="product-price product-price__common">${product.price}</p>
+                    <p class="product-price product-price__common">${product.price} р.</p>
                 </div>
             </a>
             <div class="card-icons card-icons__common">
@@ -26,7 +22,7 @@ function createProductCard(product) {
                     <img src="icons/liked.png" alt="Убрать из избранного" class="like-icon">
                 </button>
                 <button class="cart-btn">
-                    <img src="icons/cart2.png" alt="Добавить в корзину">
+                    <img src="icons/cart2.png" alt="Добавить в корзину" class="cart-icon">
                 </button>
             </div>`;
 
@@ -46,4 +42,6 @@ function displayProducts(filteredProducts) {
     filteredProducts.forEach(product => {
         productGrid.appendChild(createProductCard(product));
     });
+
+    initializeCartButtons()
 }

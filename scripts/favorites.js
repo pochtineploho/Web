@@ -9,7 +9,7 @@ function displayFavorites() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     if (favorites.length === 0) {
-        productGrid.innerHTML = '<p>В избранном нет товаров.</p>';
+        productGrid.innerHTML = '<h1 class="empty-cart">Тут пока пусто, но в ваших силах это исправить!</h1>';
         return;
     }
 
@@ -35,13 +35,14 @@ function displayFavorites() {
                     <img src="icons/liked.png" alt="Убрать из избранного" class="like-icon">
                 </button>
                 <button class="cart-btn">
-                    <img src="icons/cart2.png" alt="Добавить в корзину">
+                    <img src="icons/cart2.png" alt="Добавить в корзину" class="cart-icon">
                 </button>
             </div>`;
 
         productGrid.appendChild(card);
     });
 
+    initializeCartButtons();
     initializeRemoveFromFavorites();
 }
 

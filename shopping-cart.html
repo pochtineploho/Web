@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - POCHTINEPOLOHO</title>
+    <link rel="stylesheet" href="outlines.css">
+    <link rel="stylesheet" href="shopping-cart.css">
+    <script src="scripts/shopping-cart.js" defer></script>
+</head>
+
+<body>
+<header>
+    <div class="header-nav">
+        <div class="header-nav-left">
+            <button class="gender-btn active" id="female-btn">Женское</button>
+            <button class="gender-btn" id="male-btn">Мужское</button>
+            <script src="scripts/gender-button-href.js"></script>
+
+            <a href="search.html" class="search-link"><img src="icons/search.png" alt="Поиск" class="icon-search"></a>
+        </div>
+
+        <a href="main-page.html" class="logo">
+            <img src="icons/POCHTINEPLOHO.png" alt="POCHTINEPOLOHO Логотип">
+        </a>
+
+        <div class="header-nav-right">
+            <a href="account.html"><img src="icons/account.png" alt="Аккаунт" class="icon"></a>
+            <a href="favorites.html"><img src="icons/favorites.png" alt="Избранное" class="icon"></a>
+            <a href="shopping-cart.html"><img src="icons/cart.png" alt="Корзина" class="icon"></a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="shopping-cart">
+        <h1>Ваша корзина</h1>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+            <div id="total-price-container">
+                <p id="total-price">0 ₽</p>
+                <button id="checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 POCHTINEPOLOHO. Почти все права защищены.</p>
+</footer>
+
+</body>
+</html>

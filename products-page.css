@@ -111,7 +111,6 @@
     border-color: #000;
 }
 
-/* Модальное окно для полноэкранного просмотра */
 .image-modal {
     display: none;
     position: fixed;

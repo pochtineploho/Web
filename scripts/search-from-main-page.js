@@ -10,7 +10,6 @@ function setCategoryFromURL() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
     setCategoryFromURL();
     filterProducts();

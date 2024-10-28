@@ -463,7 +463,17 @@ footer {
     transition: background-color 0.3s;
 }
 
-
 #reset-filters-btn:hover {
     background-color: #555;
+}
+
+.cart-btn {
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.added-to-cart {
+    transform: scale(1.2);
+    background-color: #ccc;
+    color: #fff;
 }
