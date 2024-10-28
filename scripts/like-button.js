@@ -3,8 +3,8 @@ function initializeLikeButtons() {
 
     likeButtons.forEach(button => {
         const productCard = button.closest('.product-card');
-        const productId = productCard.getAttribute('id');
-
+        console.log(productCard);
+        const productId = productCard.getAttribute('product-id');
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         const favoriteIcon = button.querySelector('.like-icon');
 

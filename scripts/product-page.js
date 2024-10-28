@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const productData = JSON.parse(localStorage.getItem('selectedProduct'));
 
     if (productData) {
+        const productCard = document.querySelector('.product-card');
+        productCard.setAttribute('product-id', productData.id);
         document.querySelector('.product-name__page').textContent = productData.name;
         document.querySelector('.product-category__page').textContent = productData.description;
         document.querySelector('.product-description__page').textContent = "Описание продукта";
@@ -28,27 +30,3 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = "main-page.html";
     }
 });
-
-function setMainImage(imageElement) {
-    const mainImage = document.getElementById('main-image');
-    mainImage.src = imageElement.src;
-}
-
-function closeModal() {
-    document.getElementById('image-modal').style.display = "none";
-}
-
-document.getElementById('main-image').addEventListener('click', function () {
-    const modal = document.getElementById('image-modal');
-    const fullImage = document.getElementById('full-image');
-    fullImage.src = this.src;
-    modal.style.display = 'block';
-});
-
-
-window.onclick = function (event) {
-    const modal = document.getElementById('image-modal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-};
