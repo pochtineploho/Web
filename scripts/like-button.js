@@ -19,7 +19,7 @@ function initializeLikeButtons() {
         button.addEventListener('click', () => {
             favorites = JSON.parse(localStorage.getItem('favorites')) || [];
             const product = {
-                name: productCard.querySelector('h3').innerText,
+                name: productCard.querySelector('.product-name').innerText,
                 description: productCard.querySelector('.product-description').innerText,
                 price: productCard.querySelector('.product-price').innerText,
                 image: productCard.querySelector('img').src,

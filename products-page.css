@@ -2,7 +2,8 @@
     display: flex;
     gap: 20px;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
     align-items: flex-start;
 }
@@ -44,7 +45,7 @@
     gap: 15px;
 }
 
-.product-page-add-to-cart-btn, .product-page-add-to-liked-btn {
+.product-page-add-to-cart-btn{
     padding: 10px 20px;
     font-size: 1em;
     border: none;
@@ -54,7 +55,7 @@
     color: white;
 }
 
-.product-page-add-to-cart-btn:hover, .product-page-add-to-liked-btn:hover {
+.product-page-add-to-cart-btn:hover {
     background-color: #555;
     color: white;
     transition: transform 0.3s ease;

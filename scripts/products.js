@@ -56,7 +56,7 @@ function createProductCard(product) {
             <img src="${product.image}" alt="${product.name}">
             <div class="product-footer">
                 <div class="product-info">
-                    <h3>${product.name}</h3>
+                    <h3 class="product-name">${product.name}</h3>
                     <p class="product-description">${product.description}</p>
                 </div>
                 <p class="product-price">${product.price}</p>
