@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="outlines.css">
     <link rel="stylesheet" href="products-page.css">
     <title>Карточка товара - POCHTINEPOLOHO</title>
-    <script src="scripts/like-button.js" defer></script>
+    <script src="scripts/like-button.js"></script>
     <script src="scripts/product-page.js" defer></script>
     <script src="scripts/gender-button-href.js" defer></script>
 </head>
@@ -33,9 +33,9 @@
 <main>
     <section class="product-page-detail">
         <div class="product-page-info">
-            <h1 class="product-page-name">Пивозавр</h1>
-            <p class="product-page-category">Футболка</p>
-            <p class="product-page-description">Эта футболка идеально подходит для поклонников пива и веселья.</p>
+            <h1 class="product-page-name"></h1>
+            <p class="product-page-category"></p>
+            <p class="product-page-description"></p>
 
             <div class="product-page-buttons">
                 <button class="product-page-add-to-cart-btn">Добавить в корзину</button>
@@ -44,17 +44,17 @@
         </div>
 
         <div class="product-page-price-block">
-            <p class="product-page-price">7000 р.</p>
+            <p class="product-page-price"></p>
         </div>
 
         <div class="product-page-images">
             <div class="product-page-main-image-container">
                 <img src="images/products/beer.jpg" alt="Пивозавр" class="product-page-main-image" id="main-image">
+                <button class="like-btn on-image">
+                    <img src="icons/favorites2.png" alt="Добавить в избранное" class="like-icon">
+                </button>
             </div>
             <div class="product-page-additional-images">
-                <img src="images/products/beer.jpg" alt="Пивозавр миниатюра" onclick="setMainImage(this)">
-                <img src="images/products/beer2.jpg" alt="Пивозавр миниатюра" onclick="setMainImage(this)">
-                <img src="images/products/beer3.jpg" alt="Пивозавр миниатюра" onclick="setMainImage(this)">
             </div>
         </div>
 
