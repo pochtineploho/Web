@@ -2,41 +2,69 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="POCHTINEPOLOHO, избранное, мода">
-    <meta name="description" content="Избранные товары на POCHTINEPOLOHO">
+    <meta name="keywords" content="POCHTINEPLOHO, одежда, магазин, мода, интернет-магазин, купить">
+    <meta name="description" content="Избранные товары в интернет-магазине одежды POCHTINEPOLOHO.">
     <link rel="stylesheet" href="outlines.css">
     <title>Избранное - POCHTINEPOLOHO</title>
-    <script src="scripts/gender-button-href.js" defer></script>
+
     <script src="scripts/favorites.js" defer></script>
 </head>
+
 <body>
 <header>
     <div class="header-nav">
+        <div class="header-nav-left">
+            <button class="gender-btn active" id="female-btn">Женское</button>
+            <button class="gender-btn" id="male-btn">Мужское</button>
+            <script src="scripts/gender-button.js"></script>
+
+            <a href="search.html" class="search-link">
+                <img src="icons/search.png" alt="Поиск" class="icon-search">
+            </a>
+        </div>
+
         <a href="main-page.html" class="logo">
             <img src="icons/POCHTINEPLOHO.png" alt="POCHTINEPOLOHO Логотип">
         </a>
-        <div class="header-nav-left" id="product-page-header-nav-left">
-            <button class="gender-btn active" id="female-btn">Женское</button>
-            <button class="gender-btn" id="male-btn">Мужское</button>
-        </div>
+
         <div class="header-nav-right">
-            <a href="account.html"><img src="icons/account.png" alt="Аккаунт" class="icon"></a>
-            <a href="favorites.html"><img src="icons/favorites.png" alt="Избранное" class="icon"></a>
-            <a href="cart.html"><img src="icons/cart.png" alt="Корзина" class="icon"></a>
+            <a href="account.html">
+                <img src="icons/account.png" alt="Аккаунт" class="icon">
+            </a>
+            <a href="favorites.html">
+                <img src="icons/favorites.png" alt="Избранное" class="icon">
+            </a>
+            <a href="cart.html">
+                <img src="icons/cart.png" alt="Корзина" class="icon">
+            </a>
         </div>
+    </div>
+
+    <div class="header-categories">
+        <nav>
+            <ul>
+                <li><a href="search.html?category=t-shirts">Футболки</a></li>
+                <li><a href="search.html?category=hoodies">Худи</a></li>
+                <li><a href="search.html?category=sweatshirts">Свитшоты</a></li>
+                <li><a href="search.html?category=pants">Штаны</a></li>
+                <li><a href="search.html?category=shorts">Шорты</a></li>
+                <li><a href="search.html?category=accessories">Аксессуары</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
 <main>
-    <section class="favorites-section">
-        <h1>Избранное</h1>
-        <div id="favorites-grid" class="favorites-grid"></div>
-        <p id="empty-message" style="display: none;">Ваш список избранного пуст</p>
+    <section class="products">
+        <div class="product-grid" id="product-grid">
+        </div>
     </section>
 </main>
 
 <footer>
     <p>© 2024 POCHTINEPOLOHO. Почти все права защищены.</p>
+    <p id="load-stats"></p>
+    <script src="scripts/load-stats.js"></script>
 </footer>
 </body>
 </html>

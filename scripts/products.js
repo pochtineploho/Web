@@ -1,39 +1,58 @@
+if (!localStorage.getItem("selectedGender")) {
+    localStorage.setItem("selectedGender", "female");
+}
+
 const products = [
     {
+        id: 1,
         name: "Пивозавр",
         description: "Футболка",
         price: "7000 р.",
         image: "images/products/beer.jpg",
+        additional_images: [
+            "images/products/beer2.jpg",
+            "images/products/beer3.jpg",
+        ],
         gender: "male",
         category: "t-shirts"
     },
     {
-        name: "Модная футболка",
+        id: 2,
+        name: "Розовый закат",
         description: "Футболка",
         price: "5000 р.",
         image: "images/products/shirt.jpg",
+        additional_images: [
+            "images/products/shirt.jpg",
+            "images/products/shirt.jpg",
+        ],
         gender: "female",
         category: "t-shirts"
     },
     {
-        name: "Худи с логотипом",
+        id: 3,
+        name: "Коты",
         description: "Худи",
         price: "6000 р.",
         image: "images/products/hoodie.jpg",
+        additional_images: [
+            "images/products/hoodie.jpg",
+            "images/products/hoodie.jpg",
+        ],
         gender: "female",
         category: "hoodies"
     }
 ];
 
-let currentGender = 'female';
-
 function createProductCard(product) {
     const card = document.createElement('div');
     card.classList.add('product-card');
     card.setAttribute('data-gender', product.gender);
+    card.setAttribute('id', product.id);
+    card.setAttribute('additional_images', product.additional_images);
 
     card.innerHTML = `
-        <a href="product-page.html" class="product-link">
+        <a href="product-page.html" class="product-link" onclick="saveProductToLocalStorage(${product.id})">
             <img src="${product.image}" alt="${product.name}">
             <div class="product-footer">
                 <div class="product-info">
@@ -53,6 +72,13 @@ function createProductCard(product) {
         </div>`;
 
     return card;
+}
+
+function saveProductToLocalStorage(productId) {
+    const product = products.find(item => item.id === productId);
+    if (product) {
+        localStorage.setItem('selectedProduct', JSON.stringify(product));
+    }
 }
 
 function displayProducts(filteredProducts) {
