@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const productData = JSON.parse(localStorage.getItem('selectedProduct'));
 
     if (productData) {
-        document.querySelector('.product-page-name').textContent = productData.name;
-        document.querySelector('.product-page-category').textContent = productData.description;
-        document.querySelector('.product-page-description').textContent = "Описание продукта";
-        document.querySelector('.product-page-price').textContent = productData.price;
+        document.querySelector('.product-name__page').textContent = productData.name;
+        document.querySelector('.product-category__page').textContent = productData.description;
+        document.querySelector('.product-description__page').textContent = "Описание продукта";
+        document.querySelector('.product-price__page').textContent = productData.price;
         document.getElementById('main-image').src = productData.image;
 
         const additionalImagesContainer = document.querySelector('.product-page-additional-images');

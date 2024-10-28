@@ -24,7 +24,7 @@ function initializeLikeButtons() {
                 price: productCard.querySelector('.product-price').innerText,
                 image: productCard.querySelector('img').src,
                 gender: productCard.getAttribute('data-gender'),
-                id: productCard.getAttribute('id')
+                id: productCard.getAttribute('product-id')
             };
 
             const isFavorite = favorites.some(item => item.id === product.id);
