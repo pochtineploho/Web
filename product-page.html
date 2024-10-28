@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>POCHTINEPLOHO search</title>
+    <meta name="keywords" content="POCHTINEPOLOHO, товар, одежда, мода">
+    <meta name="description" content="Карточка товара на POCHTINEPOLOHO">
+    <link rel="stylesheet" href="outlines.css">
+    <title>Карточка товара - POCHTINEPOLOHO</title>
+    <script src="scripts/like-button.js" defer></script>
+    <script src="scripts/product-page.js" defer></script>
+    <script src="scripts/gender-button-href.js" defer></script>
 </head>
+
 <body>
-    Тут будет карточка товара
+<header>
+    <div class="header-nav">
+        <div class="header-nav-left" id="product-page-header-nav-left">
+            <button class="gender-btn active" id="female-btn">Женское</button>
+            <button class="gender-btn" id="male-btn">Мужское</button>
+        </div>
+        <a href="main-page.html" class="logo">
+            <img src="icons/POCHTINEPLOHO.png" alt="POCHTINEPOLOHO Логотип">
+        </a>
+        <div class="header-nav-right">
+            <a href="account.html"><img src="icons/account.png" alt="Аккаунт" class="icon"></a>
+            <a href="favorites.html"><img src="icons/favorites.png" alt="Избранное" class="icon"></a>
+            <a href="cart.html"><img src="icons/cart.png" alt="Корзина" class="icon"></a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="product-page-detail">
+        <div class="product-page-info">
+            <h1 class="product-page-name">Пивозавр</h1>
+            <p class="product-page-category">Футболка</p>
+            <p class="product-page-description">Эта футболка идеально подходит для поклонников пива и веселья.</p>
+
+            <div class="product-page-buttons">
+                <button class="product-page-add-to-cart-btn">Добавить в корзину</button>
+                <button class="product-page-add-to-liked-btn">В избранное</button>
+            </div>
+        </div>
+
+        <div class="product-page-price-block">
+            <p class="product-page-price">7000 р.</p>
+        </div>
+
+        <div class="product-page-images">
+            <div class="product-page-main-image-container">
+                <img src="images/products/beer.jpg" alt="Пивозавр" class="product-page-main-image" id="main-image">
+            </div>
+            <div class="product-page-additional-images">
+                <img src="images/products/beer.jpg" alt="Пивозавр миниатюра" onclick="setMainImage(this)">
+                <img src="images/products/beer2.jpg" alt="Пивозавр миниатюра" onclick="setMainImage(this)">
+                <img src="images/products/beer3.jpg" alt="Пивозавр миниатюра" onclick="setMainImage(this)">
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<div id="image-modal" class="image-modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="full-image" alt="" src="">
+</div>
+
+<footer>
+    <p>© 2024 POCHTINEPOLOHO. Почти все права защищены.</p>
+    <p id="load-stats"></p>
+    <script src="scripts/load-stats.js"></script>
+</footer>
+
 </body>
 </html>

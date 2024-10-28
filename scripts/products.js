@@ -25,7 +25,7 @@ const products = [
     }
 ];
 
-let currentGender = 'female';  // По умолчанию - женское
+let currentGender = 'female';
 
 function createProductCard(product) {
     const card = document.createElement('div');
@@ -70,7 +70,7 @@ function filterProducts() {
 
     const filteredProducts = products.filter(product => {
         const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
-        const matchesGender = product.gender === currentGender;
+        const matchesGender = product.gender === localStorage.getItem("selectedGender");
         const matchesSearch = product.name.toLowerCase().includes(searchValue) ||
             product.category.toLowerCase().includes(searchValue);
 
@@ -95,14 +95,14 @@ document.getElementById('reset-filters-btn').addEventListener('click', function(
 document.getElementById('female-btn').addEventListener('click', function() {
     document.getElementById('female-btn').classList.add('active');
     document.getElementById('male-btn').classList.remove('active');
-    currentGender = 'female';
+    localStorage.setItem("selectedGender", 'female');
     filterProducts();
 });
 
 document.getElementById('male-btn').addEventListener('click', function() {
     document.getElementById('male-btn').classList.add('active');
     document.getElementById('female-btn').classList.remove('active');
-    currentGender = 'male';
+    localStorage.setItem("selectedGender", 'male');
     filterProducts();
 });
 

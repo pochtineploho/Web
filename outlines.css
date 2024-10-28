@@ -467,3 +467,145 @@ footer {
 #reset-filters-btn:hover {
     background-color: #555;
 }
+
+/* product-page */
+.product-page-detail {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.product-page-info {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.product-page-price-block {
+    flex: 1;
+    text-align: right;
+}
+
+.product-page-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-page-category {
+    margin-top: 0;
+    color: #333;
+}
+
+.product-page-category,
+.product-page-description {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.product-page-price {
+    font-size: 2em;
+    color: #333;
+}
+
+.product-page-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.product-page-add-to-cart-btn, .product-page-add-to-liked-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+}
+
+.product-page-add-to-cart-btn:hover, .product-page-add-to-liked-btn:hover {
+    background-color: #555;
+    color: white;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+.product-page-images {
+    flex: 2;
+    position: relative;
+}
+
+.product-page-main-image-container {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.product-page-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.product-page-main-image:hover {
+    transform: scale(1.05);
+}
+
+.product-page-additional-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-page-additional-images img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.product-page-additional-images img:hover {
+    transform: scale(1.1);
+}
+
+/* Модальное окно для полноэкранного просмотра */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.image-modal .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,13 +1,12 @@
-// like-button.js
 function initializeLikeButtons() {
     const likeButtons = document.querySelectorAll('.like-btn');
 
     likeButtons.forEach(button => {
-        let isFavorite = false; // Состояние "Избранное"
+        let isFavorite = false;
         const favoriteIcon = button.querySelector('.like-icon');
 
         button.addEventListener('click', () => {
-            isFavorite = !isFavorite; // Переключаем состояние
+            isFavorite = !isFavorite;
 
             if (isFavorite) {
                 favoriteIcon.src = 'icons/liked.png';
