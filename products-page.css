@@ -153,4 +153,6 @@
     cursor: pointer;
 }
 
-
+.added-to-cart {
+    transform: scale(1);
+}

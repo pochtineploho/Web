@@ -28,6 +28,7 @@ function initializeCartButtons() {
             button.classList.add('added-to-cart');
             const cartIcon = button.querySelector('.cart-icon');
             cartIcon.src = "icons/cart.png"
+            showAlert('Товар добавлен в корзину!', 'success');
 
             setTimeout(() => {
                 cartIcon.src = "icons/cart2.png"

@@ -478,6 +478,28 @@ footer {
     color: #fff;
 }
 
+.custom-alert {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+.custom-alert.success {
+    background-color: #4CAF50;
+}
+
+.custom-alert.error {
+    background-color: #f44336;
+}
+
+
 /* Потом удалю */
 .footer-nav ul {
     list-style-type: none;
