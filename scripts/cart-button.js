@@ -30,7 +30,6 @@ function initializeCartButtons() {
             try {
                 cartIcon.src = "icons/cart.png"
             } catch (e) {}
-            console.log("Peepeepoopoo");
             showAlert('Товар добавлен в корзину!', 'success');
 
             setTimeout(() => {

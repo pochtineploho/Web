@@ -3,6 +3,6 @@
 
     window.addEventListener("load", () => {
         const fullLoadTime = performance.now();
-        loadStatsElement.innerHTML += `Page fully loaded in ${fullLoadTime.toFixed(2)} ms.`;
+        loadStatsElement.textContent += `Page fully loaded in ${fullLoadTime.toFixed(2)} ms.`;
     });
 })();

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.product-name__page').textContent = productData.name;
         document.querySelector('.product-category__page').textContent = productData.description;
         document.querySelector('.product-description__page').textContent = "Описание продукта";
-        document.querySelector('.product-price__page').textContent = productData.price;
+        document.querySelector('.product-price__page').textContent = productData.price + " р.";
         document.getElementById('main-image').src = productData.image;
 
         const additionalImagesContainer = document.querySelector('.product-page-additional-images');
