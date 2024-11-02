@@ -82,7 +82,7 @@ const products = [
         name: "Шорты м",
         description: "Шорты",
         price: "2200",
-        image: "",
+        image: "images/products/shorts.jpg",
         additional_images: [
             "",
             "",
