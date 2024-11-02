@@ -134,10 +134,12 @@ const products = [
         name: "Сумочка",
         description: "Сумочка",
         price: "199999",
-        image: "",
+        image: "images/products/bag.jpg",
         additional_images: [
-            "",
-            "",
+            "images/products/bag2.jpg",
+            "images/products/bag3.jpg",
+            "images/products/bag4.jpg",
+            "images/products/bag5.jpg",
         ],
         gender: "female",
         category: "accessories"

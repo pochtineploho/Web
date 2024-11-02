@@ -27,7 +27,10 @@ function initializeCartButtons() {
             localStorage.setItem('cart', JSON.stringify(cart));
             button.classList.add('added-to-cart');
             const cartIcon = button.querySelector('.cart-icon');
-            cartIcon.src = "icons/cart.png"
+            try {
+                cartIcon.src = "icons/cart.png"
+            } catch (e) {}
+            console.log("Peepeepoopoo");
             showAlert('Товар добавлен в корзину!', 'success');
 
             setTimeout(() => {
