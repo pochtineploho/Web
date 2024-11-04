@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     displayFavorites();
 });
 
+document.addEventListener('navigate', function() {
+    displayFavorites();
+})
+
 function displayFavorites() {
     const productGrid = document.getElementById('product-grid');
     productGrid.innerHTML = '';
@@ -63,3 +67,5 @@ function initializeRemoveFromFavorites() {
         });
     });
 }
+
+// TODO innerHTML, favourites -> product cart
