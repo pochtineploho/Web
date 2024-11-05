@@ -1,31 +1,70 @@
 function loadCartItems() {
     const cartItemsContainer = document.querySelector('.cart-items');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cartItemsContainer.innerHTML = '';
+    while (cartItemsContainer.firstChild) {
+        cartItemsContainer.removeChild(cartItemsContainer.firstChild);
+    }
 
     let totalPrice = 0;
 
     cart.forEach(item => {
         const itemElement = document.createElement('div');
         itemElement.classList.add('cart-item');
-        itemElement.innerHTML = `
-            <div class="cart-item-left">
-                <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                <div class="cart-item-details">
-                    <h2 class="cart-item-name">${item.name}</h2>
-                    <p class="cart-item-description">${item.description}</p>
-                    <p class="cart-item-price">${item.price} ₽</p>
-                    <p class="cart-item-quantity">Количество: ${item.quantity}</p>
-                </div>
-            </div>
-            <div class="cart-item-buttons">
-                <button class="add-btn" data-id="${item.id}">Добавить</button>
-                <button class="remove-btn" data-id="${item.id}">Удалить</button>
-                <button class="remove-all-btn" data-id="${item.id}">Удалить все</button>
-            </div>
-        `;
 
+        // Левая часть карточки товара
+        const itemLeft = document.createElement('div');
+        itemLeft.classList.add('cart-item-left');
+
+        const itemImage = document.createElement('img');
+        itemImage.src = item.image;
+        itemImage.alt = item.name;
+        itemImage.classList.add('cart-item-image');
+
+        const itemDetails = document.createElement('div');
+        itemDetails.classList.add('cart-item-details');
+
+        const itemName = document.createElement('h2');
+        itemName.classList.add('cart-item-name');
+        itemName.textContent = item.name;
+
+        const itemDescription = document.createElement('p');
+        itemDescription.classList.add('cart-item-description');
+        itemDescription.textContent = item.description;
+
+        const itemPrice = document.createElement('p');
+        itemPrice.classList.add('cart-item-price');
+        itemPrice.textContent = `${item.price} ₽`;
+
+        const itemQuantity = document.createElement('p');
+        itemQuantity.classList.add('cart-item-quantity');
+        itemQuantity.textContent = `Количество: ${item.quantity}`;
+
+        itemDetails.append(itemName, itemDescription, itemPrice, itemQuantity);
+        itemLeft.append(itemImage, itemDetails);
+
+        // Кнопки управления товаром
+        const itemButtons = document.createElement('div');
+        itemButtons.classList.add('cart-item-buttons');
+
+        const addButton = document.createElement('button');
+        addButton.classList.add('add-btn');
+        addButton.dataset.id = item.id;
+        addButton.textContent = 'Добавить';
+
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('remove-btn');
+        removeButton.dataset.id = item.id;
+        removeButton.textContent = 'Удалить';
+
+        const removeAllButton = document.createElement('button');
+        removeAllButton.classList.add('remove-all-btn');
+        removeAllButton.dataset.id = item.id;
+        removeAllButton.textContent = 'Удалить все';
+
+        itemButtons.append(addButton, removeButton, removeAllButton);
+        itemElement.append(itemLeft, itemButtons);
         cartItemsContainer.appendChild(itemElement);
+
         totalPrice += item.price * item.quantity;
     });
 
