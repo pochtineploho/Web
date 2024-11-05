@@ -34,7 +34,7 @@ function createProductCard(product) {
 
     const productPrice = document.createElement('p');
     productPrice.classList.add('product-price', 'product-price__common');
-    productPrice.textContent = `${product.price} р.`;
+    productPrice.textContent = `${product.price.replace('р.', '').trim()} р.`;
 
     productFooter.appendChild(productInfo);
     productFooter.appendChild(productPrice);
