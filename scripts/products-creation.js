@@ -1,36 +1,77 @@
 function createProductCard(product) {
     const card = document.createElement('div');
-    card.classList.add('product-card');
-    card.classList.add('product-card__common');
+    card.classList.add('product-card', 'product-card__common');
     card.setAttribute('data-gender', product.gender);
     card.setAttribute('product-id', product.id);
     card.setAttribute('additional-images', product.additional_images);
 
-    card.innerHTML = `
-        <a href="product-page.html" class="product-link" onclick="saveProductToLocalStorage(${product.id})">
-            <img src="${product.image}" alt="${product.name}">
-                <div class="product-footer product-footer__common">
-                    <div class="product-info product-info__common">
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-description product-description__common">${product.description}</p>
-                    </div>
-                    <p class="product-price product-price__common">${product.price} р.</p>
-                </div>
-            </a>
-            <div class="card-icons card-icons__common">
-                <button class="like-btn">
-                    <img src="icons/liked.png" alt="Убрать из избранного" class="like-icon">
-                </button>
-                <button class="cart-btn">
-                    <img src="icons/cart2.png" alt="Добавить в корзину" class="cart-icon">
-                </button>
-            </div>`;
+    const productLink = document.createElement('a');
+    productLink.href = "product-page.html";
+    productLink.classList.add('product-link');
+    productLink.addEventListener('click', () => saveProductToLocalStorage(product.id));
+
+    const productImage = document.createElement('img');
+    productImage.src = product.image;
+    productImage.alt = product.name;
+    productLink.appendChild(productImage);
+
+    const productFooter = document.createElement('div');
+    productFooter.classList.add('product-footer', 'product-footer__common');
+
+    const productInfo = document.createElement('div');
+    productInfo.classList.add('product-info', 'product-info__common');
+
+    const productName = document.createElement('h3');
+    productName.classList.add('product-name');
+    productName.textContent = product.name;
+
+    const productDescription = document.createElement('p');
+    productDescription.classList.add('product-description', 'product-description__common');
+    productDescription.textContent = product.description;
+
+    productInfo.appendChild(productName);
+    productInfo.appendChild(productDescription);
+
+    const productPrice = document.createElement('p');
+    productPrice.classList.add('product-price', 'product-price__common');
+    productPrice.textContent = `${product.price} р.`;
+
+    productFooter.appendChild(productInfo);
+    productFooter.appendChild(productPrice);
+    productLink.appendChild(productFooter);
+    card.appendChild(productLink);
+
+    const cardIcons = document.createElement('div');
+    cardIcons.classList.add('card-icons', 'card-icons__common');
+
+    const likeButton = document.createElement('button');
+    likeButton.classList.add('like-btn');
+
+    const likeIcon = document.createElement('img');
+    likeIcon.src = "icons/liked.png";
+    likeIcon.alt = "Убрать из избранного";
+    likeIcon.classList.add('like-icon');
+    likeButton.appendChild(likeIcon);
+
+    const cartButton = document.createElement('button');
+    cartButton.classList.add('cart-btn');
+
+    const cartIcon = document.createElement('img');
+    cartIcon.src = "icons/cart2.png";
+    cartIcon.alt = "Добавить в корзину";
+    cartIcon.classList.add('cart-icon');
+    cartButton.appendChild(cartIcon);
+
+    cardIcons.appendChild(likeButton);
+    cardIcons.appendChild(cartButton);
+    card.appendChild(cardIcons);
 
     return card;
 }
 
 function saveProductToLocalStorage(productId) {
-    const product = products.find(item => item.id === productId);
+    const numericProductId = Number(productId);
+    const product = products.find(item => item.id === numericProductId);
     if (product) {
         localStorage.setItem('selectedProduct', JSON.stringify(product));
     }
@@ -38,7 +79,10 @@ function saveProductToLocalStorage(productId) {
 
 function displayProducts(filteredProducts) {
     const productGrid = document.getElementById('product-grid');
-    productGrid.innerHTML = '';
+    while (productGrid.firstChild) {
+        productGrid.removeChild(productGrid.firstChild);
+    }
+
     filteredProducts.forEach(product => {
         productGrid.appendChild(createProductCard(product));
     });

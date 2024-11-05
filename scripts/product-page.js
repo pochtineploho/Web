@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const productData = JSON.parse(localStorage.getItem('selectedProduct'));
-
+    console.log(productData);
     if (productData) {
         const productCard = document.querySelector('.product-card');
         productCard.setAttribute('product-id', productData.id);
