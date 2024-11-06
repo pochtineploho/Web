@@ -11,7 +11,6 @@ function loadCartItems() {
         const itemElement = document.createElement('div');
         itemElement.classList.add('cart-item');
 
-        // Левая часть карточки товара
         const itemLeft = document.createElement('div');
         itemLeft.classList.add('cart-item-left');
 

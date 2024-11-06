@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы о POCHTINEPLOHO</title>
+    <link rel="stylesheet" href="outlines.css">
+    <link rel="stylesheet" href="reviews.css">
+    <script src="scripts/reviews.js"></script>
+    <script src="scripts/custom-alert.js"></script>
+</head>
+<body>
+<header>
+    <h1>Отзывы</h1>
+    <div id="average-rating">Средняя оценка: <span id="average-rating-value">0</span>/5</div>
+</header>
+
+<main>
+    <section id="reviews-container">
+        <h2>Все отзывы</h2>
+        <div id="reviews-list">
+        </div>
+    </section>
+
+    <section id="add-review-section">
+        <h2>Написать отзыв</h2>
+        <form id="review-form">
+            <label>
+                Имя пользователя:
+                <input type="text" id="username" maxlength="100" required>
+            </label>
+            <label>
+                Оценка:
+                <select id="rating" required>
+                    <option value="5">5 звезд</option>
+                    <option value="4">4 звезды</option>
+                    <option value="3">3 звезды</option>
+                    <option value="2">2 звезды</option>
+                    <option value="1">1 звезда</option>
+                </select>
+            </label>
+            <label>
+                Комментарий:
+                <textarea id="comment" maxlength="1000" required></textarea>
+            </label>
+            <label>
+                Плюсы:
+                <textarea id="pros" maxlength="1000"></textarea>
+            </label>
+            <label>
+                Минусы:
+                <textarea id="cons" maxlength="1000"></textarea>
+            </label>
+            <button type="submit">Выложить отзыв</button>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>

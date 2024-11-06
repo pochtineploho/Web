@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#average-rating {
+    font-size: 1.2em;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#reviews-container {
+    flex: 2;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#add-review-section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: fit-content;
+    max-width: 25%;
+}
+
+#reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+}
+
+.review-card {
+    max-width: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.review-card h3 {
+    margin: 0;
+}
+
+.review-rating {
+    color: #ff8800;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #add-review-section {
+        margin-top: 20px;
+    }
+}
