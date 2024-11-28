@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const productCard = document.querySelector('.product-card');
         productCard.setAttribute('product-id', productData.id);
         document.querySelector('.product-name__page').textContent = productData.name;
-        document.querySelector('.product-category__page').textContent = productData.description;
-        document.querySelector('.product-description__page').textContent = "Описание продукта";
+        document.querySelector('.product-category__page').textContent = productData.category;
+        document.querySelector('.product-description__page').textContent = productData.description;
         document.querySelector('.product-price__page').textContent = productData.price + " р.";
         document.getElementById('main-image').src = productData.image;
 

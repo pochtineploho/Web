@@ -7,7 +7,7 @@ async function fetchAndReplaceProducts() {
 
     try {
         const fetchData = async () => {
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=12');
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=100');
             if (!response.ok) throw new Error(`HTTP ошибка: ${response.status}`);
 
             const externalProducts = await response.json();
