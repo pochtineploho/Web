@@ -2,7 +2,7 @@ if (!localStorage.getItem("selectedGender")) {
     localStorage.setItem("selectedGender", "female");
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener(productsLoadedEvent.type, function () {
     const savedGender = localStorage.getItem('selectedGender') || 'female';
 
     if (savedGender === 'female') {

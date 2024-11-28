@@ -10,7 +10,7 @@ function setCategoryFromURL() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener(productsLoadedEvent.type, function() {
     setCategoryFromURL();
     filterProducts();
 });

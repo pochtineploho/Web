@@ -29,6 +29,6 @@ function filterProducts() {
     initializeLikeButtons();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener(productsLoadedEvent.type, function() {
     filterProducts();
 });
