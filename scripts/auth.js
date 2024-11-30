@@ -1,6 +1,5 @@
-// Обработчик для кнопки "Войти"
 document.getElementById('submitAuth').addEventListener('click', () => {
-    const login = document.getElementById('loginInput').value.trim(); // Убираем лишние пробелы
+    const login = document.getElementById('loginInput').value.trim();
     const password = document.getElementById('passwordInput').value.trim();
 
     if (login === 'pochtineploho' && password === '1234') {
