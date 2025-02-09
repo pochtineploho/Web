@@ -29,4 +29,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         window.location.href = "main-page.html";
     }
+    document.dispatchEvent(new Event('productsLoaded'));
 });

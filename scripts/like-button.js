@@ -43,7 +43,7 @@ function initializeLikeButtons() {
     });
 }
 
-document.addEventListener(productsLoadedEvent.type, function() {
+document.addEventListener('productsLoaded', function() {
     initializeLikeButtons();
 });
 
