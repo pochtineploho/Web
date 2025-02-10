@@ -347,7 +347,7 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .gender-btn {
         display: none;
     }
@@ -359,6 +359,17 @@ footer {
     .header-nav-right {
         margin: 0;
     }
+
+    main {
+        flex-direction: column;
+    }
+
+    .product-card__common {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
 }
 
 /* === Search Section Styles === */
